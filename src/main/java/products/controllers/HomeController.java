@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 //@RequestMapping("/home")
 public class HomeController {
-    @RequestMapping("/")
-    public String hello(Model uiModel) {
-        uiModel.addAttribute("name", "World!");
-        return "index";
-    }
-
-//    @RequestMapping(value = "/start/{name}", method = RequestMethod.GET)
-//    public String hello(Model uiModel, @PathVariable(value = "name") String name) {
-//        uiModel.addAttribute("name", name);
+//    @RequestMapping("/")
+//    public String hello(Model uiModel) {
+//        uiModel.addAttribute("name", "World!");
 //        return "index";
 //    }
+
+    @RequestMapping(value = "/start/{name}", method = RequestMethod.GET)
+    public String hello(Model uiModel, @PathVariable(value = "name") String name) {
+        uiModel.addAttribute("name", name);
+        return "index";
+    }
 }
