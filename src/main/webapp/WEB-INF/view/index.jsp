@@ -1,16 +1,24 @@
-<!DOCTYPE html>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<!DOCTYPE html >
 
-<html>
+<html lang="ru">
 <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/main.css" />
 </head>
 
 <body>
-<h1>Welcome page</h1>
+<h1>Product base</h1>
 
-<h1> Hello ${name}</h1>
-
-<%--, ${name}.--%>
+<a href="/form">Add product</a>
+<br>
+<a href="/allProducts">Show All products</a>
+<%--<form:form action="form">--%>
+<%--    <input type="submit" value="Add product" />--%>
+<%--</form:form>--%>
+<%--<form:form action="allProducts">--%>
+<%--    <input type="submit" value="Show All products" />--%>
+<%--</form:form>--%>
 
 </body>
 </html>
