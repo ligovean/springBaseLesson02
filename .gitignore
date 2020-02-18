@@ -3,3 +3,4 @@ src\test
 *.xml
 !resources\config.xml
 *.iml
+\target
